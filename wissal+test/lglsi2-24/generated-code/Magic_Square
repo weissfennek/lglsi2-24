@@ -11,16 +11,21 @@ def carre_magique(n):
         i -= 1
         j += 1
 
-        
+        # Check if the new position is valid, adjust if necessary
+        if i < 0:
+            i = n - 1
+        if j == n:
+            j = 0
+
     return carre_magique
 
 def afficher_carre_magique(carre_magique):
     for ligne in carre_magique:
-      
         print(" ".join(map(str, ligne)))
 
 # Exemple d'utilisation avec un carré magique d'ordre 3
 ordre = 3
 carre_magique = carre_magique(ordre)
 afficher_carre_magique(carre_magique)
+
 
