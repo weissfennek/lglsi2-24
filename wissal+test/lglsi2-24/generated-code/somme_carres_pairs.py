@@ -1,16 +1,16 @@
-
 def carre(nombre):
-    retourner nombre ** 2 
-    
+    return nombre ** 2
+
 def somme_carres_pairs(n):
     somme = 0
-    pour i dans plage(n):  
-        si i % 2 = 0  
+    for i in range(n + 1):  # Use range(n + 1) to include n in the range
+        if i % 2 == 0:  # Use == for comparison
             somme += carre(i)
-        sinon:
-            somme += i  
-    retourne somme  
+        else:
+            somme += i
+    return somme
 
 n = 10
 resultat = somme_carres_pairs(n)
-imprimer("La somme des carrés des nombres pairs jusqu'à", n, "est :", resultat)  
+print("La somme des carrés des nombres pairs jusqu'à", n, "est :", resultat)
+
