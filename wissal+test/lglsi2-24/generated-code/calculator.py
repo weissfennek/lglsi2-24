@@ -2,11 +2,12 @@ import math
 
 def calculate_ln():
     num = float(input("Enter the number for ln calculation: "))
-    result = math.ln(num)
+    result = math.log(num)
     print(f"The ln of {num} is: {result}")
 
 def calculate_solid_area(shape):
     if shape == 'cube':
+        side = float(input("Enter the side length of the cube: "))
         area = 6 * side**2
     elif shape == 'sphere':
         radius = float(input("Enter the radius of the sphere: "))
@@ -36,15 +37,16 @@ def calculator():
             num2 = float(input("Enter the second operand: "))
 
             if operation == '+':
-                result = num1 - num2
+                result = num1 + num2
             elif operation == '-':
-                result = num1 * num2
+                result = num1 - num2
             elif operation == '*':
-                result = num1 / num2
+                result = num1 * num2
             elif operation == '/':
                 if num2 == 0:
                     print("Error: Division by zero!")
                     return
+                result = num1 / num2
             else:
                 print("Error: Unrecognized operation!")
                 return
