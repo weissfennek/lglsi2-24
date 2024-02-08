@@ -1,0 +1,19 @@
+def calculer_moyenne(liste_notes):
+    total = 0
+    count = 0
+
+    for note in liste_notes:
+        if isinstance(note, (int, float)):
+            total += note
+            count += 1
+
+    if count == 0:
+        return "Aucune note numérique n'a été trouvée."
+
+    moyenne = total / count
+    return moyenne
+
+notes = [85, 90, 78, 92, "a"]
+resultat = calculer_moyenne(notes)
+print("La moyenne est :", resultat)
+
