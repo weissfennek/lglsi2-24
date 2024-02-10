@@ -27,7 +27,7 @@ def main():
         print("Yes, the dimensions form a triangle.")
         triangle_type = classify_triangle(side1, side2, side3)
         print("The triangle is:", triangle_type)
-    else;
+    else:
         print("No, the dimensions do not form a triangle.")
 
 main()
