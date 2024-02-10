@@ -23,7 +23,7 @@ def main():
     side2 = input("Enter the length of side 2: ")
     side3 = input("Enter the length of side 3: ")
 
-    if is_triangle(side1, side2, side3):
+    if is_triangle(side 1, side2, side3):
         print("Yes, the dimensions form a triangle.")
         triangle_type = classify_triangle(side1, side2, side3)
         print("The triangle is:", triangle_type)
