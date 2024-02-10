@@ -1,19 +1,13 @@
 def is_prime(number):
    
-    if number < 2:
-        return False
+    
+        
     for i in range(2, number):
         if number % i == 0:
             return False
     return True
 
-def generate_prime_numbers(limit):
-   
-    prime_numbers = []
-    current_number = 2
-    while len(prime_numbers) < limit:
-        if is_prime(current_number):
-            prime_numbers.append(current_number)
-        current_number += 1
-    return prime_numbers
-
+if is_prime(number) :
+    print(" ce nombre est   premier")
+else:
+    print("ce nombre n'est pas  premier") 
