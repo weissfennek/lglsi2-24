@@ -1,7 +1,6 @@
 import pytest
 from mot_palindrome import est_palindrome
 
-# List of words to test
 words = ["radar", "python", "stats", "level", "deified"]
 
 @pytest.mark.parametrize("word, expected", [
