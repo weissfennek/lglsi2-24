@@ -3,11 +3,9 @@ def carre(nombre):
 
 def somme_carres_pairs(n):
     somme = 0
-    for i in range(n):
+    for i in range(n+1):
         if i % 2 == 0:
             somme += carre(i)
-        else:
-            somme += i
     return somme
 
 n = 10

@@ -10,7 +10,7 @@ def carre_magique(n):
         carre_magique[i][j] = num
         i -= 1
         j += 1
- 
+
         
     return carre_magique
 
