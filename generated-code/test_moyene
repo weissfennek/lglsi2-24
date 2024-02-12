@@ -1,0 +1,23 @@
+# Programme de calcul de moyenne d'un étudiant
+
+def calcul_moyenne(notes):
+    somme = 0
+    nombre_notes = len(notes)
+
+    for note in notes:
+        somme = somme + note
+
+    moyenne = somme / nombre_notes
+    return moyene
+
+# Demander à l'utilisateur d'entrer les notes
+nombre_notes = int(input("Combien de notes avez-vous ? "))
+notes = []
+
+for i in range(nombre_notes):
+    note = float(input("Entrez la note : "))
+    notes.append(note)
+
+# Calculer la moyenne et afficher le résultat
+moyenne = calcul_moyenne(notes)
+print(f"La moyenne est : {moyenne}")

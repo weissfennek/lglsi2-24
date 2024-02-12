@@ -1,14 +1,11 @@
-
 def carre(nombre):
     retourner nombre ** 2 
     
 def somme_carres_pairs(n):
     somme = 0
-    pour i dans plage(n):  
+    pour i dans plage(n+1):  
         si i % 2 = 0  
             somme += carre(i)
-        sinon:
-            somme += i  
     retourne somme  
 
 n = 10
