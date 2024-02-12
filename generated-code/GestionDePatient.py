@@ -7,9 +7,7 @@ class Patient:
     def afficher_informations(self):
         print(f"Nom: {self.nom} {self.prenom}")
         print(f"Age: {self.age}")
-        print("---")
-
-
+        print("---");
 class Secretaire:
     def __init__(self, nom, prenom):
         self.nom = nom
