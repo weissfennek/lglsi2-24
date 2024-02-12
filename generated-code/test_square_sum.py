@@ -18,5 +18,6 @@ def test_calculate_square_sum():
     numbers = [1.5, 2.5, 3.5]
     assert calculate_square_sum(numbers) == 20.75  # Expected result is the sum of squares: 1.5^2 + 2.5^2 + 3.5^2 = 18.75
 
+    #Test with a list containing float and integer numbers
     numbers=[1.5,3,8,9]
     assert calculate_square_sum(numbers) == 156.25
