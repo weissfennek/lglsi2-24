@@ -8,8 +8,6 @@ class Patient:
         print(f"Nom: {self.nom} {self.prenom}")
         print(f"Age: {self.age}")
         print("---")
-
-
 class Secretaire:
     def __init__(self, nom, prenom):
         self.nom = nom
