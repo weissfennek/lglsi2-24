@@ -41,85 +41,58 @@ def welcome():
 def main():
     wallet = 200000  # Initialize wallet
     welcome()
-    rep = input()
+    rep = input("Enter your choice: ")
     model = ""
 
     # Mapping user input to model
-    match rep:
-        case "1":
-            model = "Kia"
-        case "2":
-            model = "Audi"
-        case "3":
-            model = "Fiat"
-        case "4":
-            model = "Jeep"
-        case "5":
-            model = "Peugeot"
-        case "6":
-            model = "Volkswagen"
-        case _:
-            print("Invalid choice!")
-            return
+    if rep == "1":
+        model = "Kia"
+    elif rep == "2":
+        model = "Audi"
+    elif rep == "3":
+        model = "Fiat"
+    elif rep == "4":
+        model = "Jeep"
+    elif rep == "5":
+        model = "Peugeot"
+    elif rep == "6":
+        model = "Volkswagen"
+    else:
+        print("Invalid choice!")
+        return
 
     print("Great choice! Here are the available models of", model)
 
     # Selling logic based on the selected model
-    match model:
-        case "Kia":
-            print(Kia)
-            print("What do you want to buy?")
-            rep = input()
-            match rep:
-                case "Sonet X":
-                    if wallet < Kia["Sonet X"]:
-                        print("Sorry, we can't sell it for you below the shown price")
-                    else:
-                        wallet -= Kia["Sonet X"]
-                        print("Congratulations!")
-                        return
-                case "Sonet HTX":
-                    if wallet < Kia["Sonet HTX"]:
-                        print("Sorry, we can't sell it for you below the shown price")
-                    else:
-                        wallet -= Kia["Sonet HTX"]
-                        print("Congratulations!")
-                        return
-                case "Sonet GTX":
-                    if wallet < Kia["Sonet GTX"]:
-                        print("Sorry, we can't sell it for you below the shown price")
-                    else:
-                        wallet -= Kia["Sonet GTX"]
-                        print("Congratulations!")
-                        return
-                case "Sonet HTK":
-                    if wallet < Kia["Sonet HTK"]:
-                        print("Sorry, we can't sell it for you below the shown price")
-                    else:
-                        wallet -= Kia["Sonet HTK"]
-                        print("Congratulations!")
-                        return
-                case _:
-                    print("Invalid choice!")
-                    return
-        case "Audi":
-            print(Audi)
-            # Ajouter la logique pour Audi
-        case "Fiat":
-            print(Fiat)
-            # Ajouter la logique pour Fiat
-        case "Jeep":
-            print(Jeep)
-            # Ajouter la logique pour Jeep
-        case "Peugeot":
-            print(Peugeot)
-            # Ajouter la logique pour Peugeot
-        case "Volkswagen":
-            print(Volkswagen)
-            # Ajouter la logique pour Volkswagen
-        case _:
-            print("Invalid choice!")
-            return
+    if model == "Kia":
+        print(Kia)
+        print("What do you want to buy?")
+        rep = input()
+        if rep in Kia:
+            if wallet < Kia[rep]:
+                print("Sorry, we can't sell it for you below the shown price")
+            else:
+                wallet -= Kia[rep]
+                print("Congratulations!")
+        else:
+            print("Invalid model!")
+    elif model == "Audi":
+        print(Audi)
+        # Ajouter la logique pour Audi
+    elif model == "Fiat":
+        print(Fiat)
+        # Ajouter la logique pour Fiat
+    elif model == "Jeep":
+        print(Jeep)
+        # Ajouter la logique pour Jeep
+    elif model == "Peugeot":
+        print(Peugeot)
+        # Ajouter la logique pour Peugeot
+    elif model == "Volkswagen":
+        print(Volkswagen)
+        # Ajouter la logique pour Volkswagen
+    else:
+        print("Invalid choice!")
 
 if __name__ == "__main__":
     main()
