@@ -1,10 +1,8 @@
 import math
-
 def calculate_ln():
     num = float(input("Enter the number for ln calculation: "))
     result = math.log(num)
     print(f"The ln of {num} is: {result}")
-
 def calculate_solid_area(shape):
     if shape == 'cube':
         side = float(input("Enter the side length of the cube: "))
