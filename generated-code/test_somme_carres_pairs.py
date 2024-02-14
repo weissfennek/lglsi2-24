@@ -1,13 +1,17 @@
-def carre(nombre):
-    return nombre ** 2
+import pytest
 
-def somme_carres_pairs(n):
-    somme = 0
-    for i in range(n+1):
-        if i % 2 == 0:
-            somme += carre(i)
-    return somme
+from somme_carres_pairs import carre,somme_carres_pairs
 
-n = 10
-resultat = somme_carres_pairs(n)
-print("La somme des carrés des nombres pairs jusqu'à", n, "est :", resultat)
+def test_carre():
+    assert carre(2) == 4
+    assert carre(3) == 9
+    assert carre(0) == 0
+    assert carre(-2)== 4
+
+
+def test_somme_carres_pairs():
+    assert somme_carres_pairs(10) == 220
+    assert somme_carres_pairs(0) == 0
+    assert somme_carres_pairs(2) == 4
+    assert somme_carres_pairs(-2) == 0
+    

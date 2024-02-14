@@ -1,4 +1,3 @@
-#code correct 
 def check_prime(n):
     if n <= 1:
         return False
