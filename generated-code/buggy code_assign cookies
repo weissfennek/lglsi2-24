@@ -1,0 +1,12 @@
+class Solution(object):
+    def findContentChildren(self, g, s):
+        g.sort()
+        content_children = 0
+        cookie_index = 0
+        for greed in g:
+            while cookie_index < len(s) and s[cookie_index] < greed:
+                cookie_index += 1
+            if cookie_index < len(s):
+                content_children += 1
+                cookie_index += 1
+        return content_children
