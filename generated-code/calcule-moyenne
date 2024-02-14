@@ -6,6 +6,6 @@ def calculer_moyenne(liste_notes):
     return moyenne
 
 
-notes = [85, 90, 78, 92, "a"]
+notes = [85, 90, 78, 92, 44]
 resultat = calculer_moyenne(notes)
 print("La moyenne est :", resultat)
