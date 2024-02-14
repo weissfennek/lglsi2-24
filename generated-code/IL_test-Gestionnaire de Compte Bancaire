@@ -1,0 +1,40 @@
+class CompteBancaire:
+def init(self, solde_initial=0):
+self.solde = solde_initial
+
+def deposer(self, montant):
+    self.solde += montant
+    print(f"Montant déposé : {montant}")
+
+def retirer(self, montant):
+    if montant > self.solde:
+        print("Solde insuffisant.")
+    else:
+        self.solde -= montant
+        print(f"Montant retiré : {montant}")
+
+def solde_actuel(self):
+    print(f"Solde actuel : {self.solde}")
+if name == "main":
+compte = CompteBancaire()
+
+while True:
+    print("\nQue souhaitez-vous faire ?")
+    print("1. Déposer de l'argent")
+    print("2. Retirer de l'argent")
+    print("3. Vérifier le solde")
+    print("4. Quitter")
+
+    choix = input("Entrez votre choix (1/2/3/4) : ")
+
+    if choix == "1":
+        montant = float(input("Entrez le montant à déposer : "))
+        compte.deposer(montant)
+    elif choix == "2":
+        montant = float(input("Entrez le montant à retirer : "))
+        compte.retirer(montant)
+    elif choix == "3":
+        compte.solde_actuel()
+    elif choix == "4":
+        print("Merci d'avoir utilisé notre service.")
+        break
