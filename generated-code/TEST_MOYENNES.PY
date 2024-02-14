@@ -1,11 +1,7 @@
 def find_average(numbers):
-    if not numbers:
-        print("La liste est vide.")
-        return None
-
-    if not all((type(num) == int or type(num) == float) for num in numbers):
-        print("La liste contient des éléments non numériques.")
-    total = sum(numbers)
+    total = 0
+    for num in numbers:
+        total += num
     average = total / len(numbers)
     return average
 
