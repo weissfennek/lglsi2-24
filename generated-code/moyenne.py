@@ -1,12 +1,17 @@
 def calculer_moyenne(liste_notes):
-    if not len(liste_notes):
+    length = 0
+    for i in liste_notes:
+        length += 1
+    
+    if length == 0:
         return 0
-    if not all(isinstance(x, (int, float)) for x in liste_notes):
-        return None
-        
-    return sum(liste_notes) / len(liste_notes)
+    else:
+        somme = 0
+        for i in liste_notes:
+            somme += i
+        return somme / length
 
-# Must be a list of integer or float
+# Must be a list of floats
 notes = [85, 90, 78, 92]
-resultat = calculer_moyenne(notes)
-print("La moyenne est :", resultat)
+moyenne = calculer_moyenne(notes)
+print("La moyenne est :", moyenne)
